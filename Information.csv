@@ -1,53 +1,154 @@
-date|time|item|vendor|amount
-2022-09-01|12:30:09|Acer Monitor|Amazon|-20000
-2022-09-01|12:30:09|Acer Monitor|Amazon|-20000
-2022-09-02|09:45:37|Breakfast Combo|McDonalds|-950
-2022-09-03|18:22:14|Freelance Payment|Upwork|+42000
-2022-09-04|20:11:45|Netflix Subscription|Online Payment|-1200
-2022-09-05|07:55:09|Bus Ticket|Transit App|-350
-2022-09-06|14:20:33|Headphones|Best Buy|-7800
-2022-09-07|16:40:52|Salary Deposit|Bank|+115000
-2022-09-08|13:09:26|Lunch|Chipotle|-1450
-2022-09-09|19:44:03|Uber Ride|Uber|-2100
-2022-09-10|08:33:10|Interest Credit|Bank|+500
-2022-09-11|15:25:41|Electricity Bill|Utility Co|-9600
-2022-09-12|10:58:24|Gaming Keyboard|Newegg|-8900
-2022-09-13|21:36:18|Movie Ticket|AMC|-2300
-2022-09-14|17:47:50|Gym Membership|Anytime Fitness|-4500
-2022-09-15|11:29:07|Grocery Shopping|Walmart|-16200
-2022-09-16|23:14:55|Friend Transfer|Venmo|-5000
-2022-09-17|09:12:41|Book Purchase|Barnes & Noble|-2400
-2022-09-18|18:03:32|Freelance Bonus|Upwork|+12500
-2022-09-19|07:55:13|Morning Coffee|Starbucks|-620
-2022-09-20|20:18:42|Online Course|Udemy|-3500
-2022-09-01|12:30:09|Acer Monitor|Amazon|-20000
-2022-10-05|09:15:42|Office Chair|Ikea|-15000
-2022-12-11|14:22:08|Freelance Payment|Upwork|+45000
-2023-01-03|10:40:17|Coffee|Starbucks|-550
-2023-03-18|18:12:34|Electricity Bill|Utility Co|-8900
-2023-04-07|16:50:21|Salary Deposit|Bank|+120000
-2023-06-22|08:33:10|Lunch|Chipotle|-1350
-2023-08-14|19:47:55|Uber Ride|Uber|-2100
-2023-09-30|13:25:49|Book Purchase|Barnes & Noble|-2400
-2023-11-12|21:05:33|Gaming Keyboard|Newegg|-8900
-2024-01-15|11:18:02|Freelance Bonus|Upwork|+15000
-2024-02-28|07:50:10|Morning Coffee|Dunkin|-620
-2024-03-21|17:33:55|Netflix Subscription|Online Payment|-1200
-2024-04-05|13:42:16|Grocery Shopping|Walmart|-16200
-2024-05-17|22:10:01|Movie Ticket|AMC|-2300
-2024-06-08|09:25:40|Electricity Bill|Utility Co|-9700
-2024-07-19|20:15:22|Salary Deposit|Bank|+125000
-2024-08-23|12:30:11|Headphones|Best Buy|-7800
-2024-09-04|15:45:30|Friend Transfer|Venmo|-5000
-2024-10-14|10:50:07|Online Course|Udemy|-3500
-2024-11-27|18:05:42|Freelance Payment|Upwork|+42000
-2025-01-02|08:22:33|Breakfast Combo|McDonalds|-950
-2025-02-18|19:47:55|Salary Deposit|Bank|+130000
-2025-03-12|14:33:29|Uber Ride|Uber|-2200
-2025-04-23|09:12:10|Lunch|Chipotle|-1450
-2025-05-07|21:50:44|Gaming Mouse|Amazon|-5500
-2025-06-30|12:15:36|Coffee|Starbucks|-650
-2025-07-18|17:28:09|Freelance Bonus|Upwork|+12000
-2025-08-25|08:44:50|Grocery Shopping|Target|-15500
-2025-09-14|16:33:21|Electricity Bill|Utility Co|-8800
-2025-10-05|20:15:02|Movie Ticket|AMC|-2500
+
+2024-01-01|05:43:11|Freelance Bonus|Upwork|+15395
+2024-01-06|11:20:37|Grocery Shopping|Walmart|-16197
+2024-01-06|18:09:33|Grocery Shopping|Target|-15461
+2024-01-11|11:59:14|Bus Ticket|Transit App|-378
+2024-01-14|15:56:02|Salary Deposit|Bank|+126168
+2024-01-18|07:03:35|Coffee|Starbucks|-690
+2024-01-22|10:22:44|Breakfast Combo|McDonalds|-812
+2024-01-26|04:56:00|Uber Ride|Uber|-2172
+2024-01-27|19:22:48|Headphones|Best Buy|-8184
+2024-02-04|21:04:55|Grocery Shopping|Walmart|-17189
+2024-02-13|01:45:50|Interest Credit|Bank|+685
+2024-02-13|11:10:57|Gym Membership|Anytime Fitness|-4219
+2024-02-16|17:05:03|Freelance Bonus|Upwork|+11682
+2024-02-22|03:02:27|Grocery Shopping|Walmart|-17596
+2024-02-28|11:45:49|Freelance Bonus|Upwork|+18325
+2024-02-28|18:27:23|Breakfast Combo|McDonalds|-855
+2024-02-29|07:29:52|Uber Ride|Uber|-2391
+2024-02-29|11:33:42|Headphones|Best Buy|-7982
+2024-03-12|02:20:55|Netflix Subscription|Online Payment|-1170
+2024-03-18|12:48:25|Online Course|Udemy|-3006
+2024-03-26|00:13:13|Grocery Shopping|Target|-17278
+2024-03-26|01:52:57|Breakfast Combo|McDonalds|-1092
+2024-03-28|12:39:34|Online Course|Udemy|-3153
+2024-03-28|13:42:06|Gaming Keyboard|Newegg|-8308
+2024-03-30|14:49:22|Freelance Payment|Upwork|+35221
+2024-03-31|20:41:13|Netflix Subscription|Online Payment|-1012
+2024-04-09|08:54:29|Lunch|Chipotle|-1482
+2024-04-18|17:19:51|Salary Deposit|Bank|+133163
+2024-04-19|17:12:45|Lunch|Chipotle|-1576
+2024-04-23|22:26:52|Grocery Shopping|Walmart|-16017
+2024-04-25|12:16:54|Freelance Payment|Upwork|+42520
+2024-04-28|00:27:39|Bus Ticket|Transit App|-348
+2024-05-01|18:46:55|Bus Ticket|Transit App|-378
+2024-05-09|07:32:45|Bus Ticket|Transit App|-358
+2024-05-11|11:17:34|Breakfast Combo|McDonalds|-804
+2024-05-14|14:58:13|Interest Credit|Bank|+565
+2024-05-20|18:48:39|Book Purchase|Barnes & Noble|-2141
+2024-05-23|14:08:40|Movie Ticket|AMC|-2131
+2024-05-30|03:24:49|Gaming Mouse|Amazon|-4577
+2024-06-05|14:55:49|Bus Ticket|Transit App|-369
+2024-06-07|15:34:54|Book Purchase|Barnes & Noble|-2398
+2024-06-11|10:12:24|Freelance Bonus|Upwork|+10229
+2024-06-14|09:01:40|Salary Deposit|Bank|+132119
+2024-06-21|16:55:03|Freelance Payment|Upwork|+44236
+2024-06-23|08:33:18|Gaming Keyboard|Newegg|-8590
+2024-06-28|18:18:27|Uber Ride|Uber|-2208
+2024-07-03|09:46:15|Headphones|Best Buy|-8450
+2024-07-07|12:40:41|Grocery Shopping|Target|-16138
+2024-07-11|20:45:07|Salary Deposit|Bank|+111905
+2024-07-13|11:33:19|Netflix Subscription|Online Payment|-1188
+2024-07-17|13:26:45|Online Course|Udemy|-3358
+2024-07-22|17:58:53|Freelance Payment|Upwork|+39784
+2024-07-25|15:14:09|Movie Ticket|AMC|-2299
+2024-08-01|06:25:42|Gym Membership|Anytime Fitness|-4201
+2024-08-03|21:11:00|Breakfast Combo|McDonalds|-1001
+2024-08-05|10:34:21|Coffee|Starbucks|-661
+2024-08-08|12:27:18|Book Purchase|Barnes & Noble|-2440
+2024-08-10|08:56:09|Freelance Bonus|Upwork|+15234
+2024-08-14|14:47:13|Uber Ride|Uber|-2253
+2024-08-17|09:22:07|Online Course|Udemy|-3200
+2024-08-22|18:42:54|Grocery Shopping|Walmart|-17488
+2024-08-25|20:55:33|Movie Ticket|AMC|-2111
+2024-08-29|15:37:28|Gaming Mouse|Amazon|-4983
+2024-09-03|12:19:51|Bus Ticket|Transit App|-316
+2024-09-07|19:26:17|Salary Deposit|Bank|+130823
+2024-09-12|08:13:48|Lunch|Chipotle|-1349
+2024-09-14|21:55:09|Gaming Keyboard|Newegg|-8207
+2024-09-19|11:45:37|Headphones|Best Buy|-7544
+2024-09-22|16:37:11|Freelance Payment|Upwork|+40712
+2024-09-27|20:21:06|Netflix Subscription|Online Payment|-1054
+2024-10-02|13:28:09|Freelance Bonus|Upwork|+16982
+2024-10-04|07:49:55|Coffee|Starbucks|-642
+2024-10-07|09:35:14|Breakfast Combo|McDonalds|-947
+2024-10-11|17:02:47|Grocery Shopping|Walmart|-15842
+2024-10-16|15:41:36|Uber Ride|Uber|-2340
+2024-10-20|20:17:23|Salary Deposit|Bank|+124395
+2024-10-25|11:29:19|Freelance Payment|Upwork|+43150
+2024-10-29|14:46:42|Online Course|Udemy|-3159
+2024-11-02|18:52:18|Movie Ticket|AMC|-2308
+2024-11-07|09:12:25|Gaming Mouse|Amazon|-4218
+2024-11-09|19:05:33|Bus Ticket|Transit App|-366
+2024-11-13|10:25:57|Freelance Bonus|Upwork|+14578
+2024-11-17|15:49:22|Salary Deposit|Bank|+127882
+2024-11-23|08:56:44|Lunch|Chipotle|-1447
+2024-11-28|16:17:18|Interest Credit|Bank|+703
+2024-12-03|21:43:51|Online Course|Udemy|-3331
+2024-12-08|07:25:36|Headphones|Best Buy|-8063
+2024-12-14|12:54:11|Freelance Payment|Upwork|+38972
+2024-12-18|19:32:09|Netflix Subscription|Online Payment|-1119
+2024-12-22|09:18:45|Movie Ticket|AMC|-2150
+2024-12-27|11:09:55|Salary Deposit|Bank|+130906
+2025-01-03|15:26:38|Bus Ticket|Transit App|-342
+2025-01-07|18:51:27|Freelance Bonus|Upwork|+10411
+2025-01-10|08:59:14|Breakfast Combo|McDonalds|-986
+2025-01-14|14:38:59|Coffee|Starbucks|-671
+2025-01-20|20:45:25|Uber Ride|Uber|-2102
+2025-01-25|09:12:53|Freelance Payment|Upwork|+36899
+2025-01-28|13:05:44|Grocery Shopping|Target|-17122
+2025-02-03|07:45:51|Gym Membership|Anytime Fitness|-4688
+2025-02-09|18:10:37|Salary Deposit|Bank|+128913
+2025-02-14|15:26:49|Movie Ticket|AMC|-2245
+2025-02-18|11:19:05|Online Course|Udemy|-3311
+2025-02-22|17:42:12|Lunch|Chipotle|-1478
+2025-02-27|10:25:41|Book Purchase|Barnes & Noble|-2311
+2025-03-02|14:44:27|Gaming Mouse|Amazon|-5555
+2025-03-06|19:31:56|Bus Ticket|Transit App|-395
+2025-03-10|09:03:48|Salary Deposit|Bank|+133274
+2025-03-13|12:54:15|Freelance Bonus|Upwork|+17892
+2025-03-18|20:39:29|Freelance Payment|Upwork|+44022
+2025-03-24|07:17:42|Grocery Shopping|Walmart|-17519
+2025-03-28|08:59:36|Movie Ticket|AMC|-2266
+2025-04-03|17:45:02|Gaming Keyboard|Newegg|-8572
+2025-04-07|13:58:22|Lunch|Chipotle|-1409
+2025-04-13|09:21:59|Interest Credit|Bank|+785
+2025-04-19|20:33:44|Freelance Payment|Upwork|+37524
+2025-04-23|11:29:36|Netflix Subscription|Online Payment|-1223
+2025-04-28|16:14:48|Salary Deposit|Bank|+129812
+2025-05-03|09:15:14|Bus Ticket|Transit App|-312
+2025-05-07|13:37:59|Coffee|Starbucks|-648
+2025-05-11|15:18:25|Breakfast Combo|McDonalds|-923
+2025-05-16|18:41:37|Freelance Bonus|Upwork|+11290
+2025-05-22|08:10:51|Headphones|Best Buy|-7495
+2025-05-25|10:24:09|Book Purchase|Barnes & Noble|-2478
+2025-05-30|21:36:23|Online Course|Udemy|-3094
+2025-06-04|19:11:17|Movie Ticket|AMC|-2433
+2025-06-09|08:33:41|Salary Deposit|Bank|+131276
+2025-06-13|10:48:57|Gaming Mouse|Amazon|-5117
+2025-06-18|14:35:02|Freelance Payment|Upwork|+41891
+2025-06-24|12:59:55|Lunch|Chipotle|-1507
+2025-06-30|09:45:26|Uber Ride|Uber|-2058
+2025-07-04|17:19:12|Netflix Subscription|Online Payment|-1175
+2025-07-09|11:28:58|Gaming Keyboard|Newegg|-8438
+2025-07-13|13:59:21|Freelance Bonus|Upwork|+12684
+2025-07-18|10:33:40|Gym Membership|Anytime Fitness|-4312
+2025-07-23|21:17:09|Freelance Payment|Upwork|+44387
+2025-07-27|08:02:47|Salary Deposit|Bank|+128743
+2025-08-02|19:33:15|Bus Ticket|Transit App|-367
+2025-08-08|07:49:22|Book Purchase|Barnes & Noble|-2222
+2025-08-14|15:21:38|Lunch|Chipotle|-1492
+2025-08-18|13:11:41|Interest Credit|Bank|+774
+2025-08-23|16:43:05|Freelance Bonus|Upwork|+16291
+2025-08-27|20:50:59|Movie Ticket|AMC|-2460
+2025-09-03|08:15:33|Coffee|Starbucks|-684
+2025-09-08|12:47:44|Salary Deposit|Bank|+133885
+2025-09-12|10:22:56|Freelance Payment|Upwork|+37441
+2025-09-17|18:33:14|Grocery Shopping|Walmart|-16012
+2025-09-21|09:57:25|Headphones|Best Buy|-7805
+2025-09-26|13:48:42|Uber Ride|Uber|-2126
+2025-09-30|22:15:51|Freelance Payment|Upwork|+39976
+2025-10-04|07:39:28|Lunch|Chipotle|-1468
+2025-10-08|12:19:03|Salary Deposit|Bank|+130529
+2025-10-12|09:41:56|Netflix Subscription|Online Payment|-1203
+2025-10-14|14:33:21|Freelance Bonus|Upwork|+14977

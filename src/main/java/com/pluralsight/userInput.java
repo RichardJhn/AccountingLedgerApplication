@@ -1,5 +1,10 @@
 package com.pluralsight;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.EOFException;
+import java.io.IOException;
+
 public class userInput {
     private double Deposit;
     private double Payment;
@@ -23,5 +28,21 @@ public class userInput {
     }
     public void setLedger(String ledger){
         this.Ledger = ledger;
+    }
+
+    public void loadVendor(){
+        try (BufferedReader reader = new BufferedReader(new FileReader("information.csv"))){
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts =  line.split("\\|");
+                if (parts.length == 5){
+                    System.out.printf("""
+                            Searching by vendor %s""", parts[3]);
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.println("error reading file");
+        }
     }
 }

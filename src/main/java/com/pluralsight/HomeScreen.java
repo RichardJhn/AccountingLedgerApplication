@@ -4,10 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.time.LocalDate;
 
 public class HomeScreen {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+
+        LocalDate displayTime = LocalDate.now();
 
 
         try {
@@ -17,12 +20,12 @@ public class HomeScreen {
             double totalAmountInAccount = 0.00;
             String choice = "";
             while (!choice.equalsIgnoreCase("X")) {
-                System.out.println("What would you like to do?: ");
+                System.out.println("=== HomeScreen ===");
                 System.out.println("""
                         D)Add Deposit
                         P)Make Payment(Debit)
                         L)Ledger
-                        X)Exit""");
+                        X)Exit \n""");
                 System.out.println("enter your choice: ");
                 choice = scanner.nextLine().trim();
                 //Using scanner
@@ -58,6 +61,7 @@ public class HomeScreen {
         catch(IOException e ){
                 System.out.println("error reading file");
             }
+
 
 
 
