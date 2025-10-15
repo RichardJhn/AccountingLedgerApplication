@@ -138,8 +138,10 @@ public class ledgerScreen {
                         //String time = parts[1];
                         //String vendor = parts[3];
                         //double amount = Double.parseDouble(parts[4]);
+                        LocalDate now = LocalDate.now();
                         LocalDate entryDate = LocalDate.parse(date, dateFormat);
                         LocalDate startOfMonth = LocalDate.now().withDayOfMonth(1);
+                        LocalDate firstDayLastMonth = now.minusMonths(1);
 
 
                         if (choice.equals("1")) {
@@ -148,7 +150,9 @@ public class ledgerScreen {
                             }
                         }
                         if (choice.equals("2")){
-                            if (!entryDate.isBefore(startOfMonth) && !entryDate.isAfter())
+                            if(!entryDate.isBefore(firstDayLastMonth) && entryDate.isBefore(startOfMonth)){
+                                System.out.println(date);
+                            }
                         }
 
                     }
