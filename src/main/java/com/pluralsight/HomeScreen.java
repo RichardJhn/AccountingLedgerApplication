@@ -70,7 +70,7 @@ public class HomeScreen {
             String description = scanner.nextLine();
             System.out.println("Who is the Vendor?");
             String vendor = scanner.nextLine();
-            System.out.println("How much is this item?");
+            System.out.println("How much are you selling this item for?");
             double price = scanner.nextDouble();
             scanner.nextLine();
 
@@ -86,21 +86,27 @@ public class HomeScreen {
     public static void transaction() {
         try {
             Scanner scanner = new Scanner(System.in);
-            FileWriter newWriter = new FileWriter("UserPaymentInfo.csv", true );
-            System.out.println("what is your name?");
-            String name = scanner.nextLine();
-            System.out.println("What is your debit card info?");
-            String debitCard = scanner.nextLine();
-            System.out.println("What is you cvv?");
-            String cvv = scanner.nextLine();
-            System.out.println("what is the expiration date??");
-            String expiration = scanner.nextLine();
+            FileWriter myWriter = new FileWriter("information.csv", true);
+            System.out.println("What is the date?");
+            String date = scanner.nextLine();
+            System.out.println("What time is it?");
+            String time = scanner.nextLine();
+            System.out.println("Whats the decription of your item?");
+            String description = scanner.nextLine();
+            System.out.println("Who is the Vendor?");
+            String vendor = scanner.nextLine();
+            System.out.println("How much is this item?");
+            double price = scanner.nextDouble();
+            scanner.nextLine();
 
-            newWriter.write(String.format("\nName:%s|CardNumber:%s|CVV:%s|Expiration:%s", name, debitCard, cvv, expiration));
-            newWriter.close();
 
-        } catch (IOException e) {
+            depositEntry deposit = new depositEntry(date, time, description, vendor, price);
+            myWriter.write(String.format("\n%s|%s|%s|%s|%.2f", date, time, description, vendor, price));
+            myWriter.close();
+
+        }catch (IOException e){
             System.out.println("an error occured");
+
         }
     }
 }
