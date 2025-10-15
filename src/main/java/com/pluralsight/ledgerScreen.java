@@ -171,8 +171,20 @@ public class ledgerScreen {
                             String vendorSearch = scanner.nextLine();
                             for (LedgerEntry entry : entries){
                             if(entry.getVendor().equalsIgnoreCase(vendorSearch)){
-                                System.out.println(loadEntries();
+                                System.out.println(entry);
+
+
+
                             }
+
+                            }
+                            System.out.println("""
+                                        Would you like to return to the Reports screen?
+                                        1) Yes
+                                        2) No""");
+                            if(vendorSearch.equals("1")){
+                                System.out.println("returning to Reports");
+                                break;
                             }
 
                         }
