@@ -129,8 +129,9 @@ public class ledgerScreen {
 
             try (BufferedReader reader = new BufferedReader(new FileReader("information.csv"))) {
                 String line;
-                DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");// skip header
+
                 while ((line = reader.readLine()) != null) {
+                    DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                     String[] parts = line.split("\\|");
                     if (parts.length == 5) {
                         String date = parts[0];
@@ -141,37 +142,41 @@ public class ledgerScreen {
                         LocalDate now = LocalDate.now();
                         LocalDate entryDate = LocalDate.parse(date, dateFormat);
                         LocalDate startOfMonth = LocalDate.now().withDayOfMonth(1);
-                        LocalDate firstDayLastMonth = now.minusMonths(1);
+                        LocalDate firstDayLastMonth = now.minusMonths(1).withDayOfMonth(1);
                         LocalDate startOfYear = LocalDate.of(now.getYear(), 1, 1);
                         LocalDate startOfLastYear = LocalDate.of(now.getYear() - 1, 1, 1);
                         LocalDate startOfNextMonth = startOfMonth.plusMonths(1);
-                        LocalDate endOfLastMonth = now.withDayOfMonth(1).minusDays(1);
+                        LocalDate endOfLastMonth = startOfMonth.withDayOfMonth(1).minusDays(1);
 
 
                         if (choice.equals("1")) {
                             for (LedgerEntry entry : entries) {
                                 if (!entryDate.isBefore(startOfMonth) && entryDate.isBefore(startOfNextMonth)) {
-                                    System.out.println(entry);
+                                    System.out.println(line);
                                 }
                                 break;
                             }
                         }
                         if (choice.equals("2")) {
                             for (LedgerEntry entry : entries) {
-                                if (!entryDate.isAfter(firstDayLastMonth) && !entryDate.isBefore(endOfLastMonth)) {
-                                    System.out.println(entry);
+                                if (entryDate.isAfter(firstDayLastMonth) && entryDate.isBefore(endOfLastMonth)) {
+                                    System.out.println(line);
                                 }
                                 break;
                             }
                         }
                         if (choice.equals("3")) {
-                            if (!entryDate.isBefore(startOfYear)) {
-                                System.out.println(entries);
+                            for (LedgerEntry entry : entries){
+                            if (!entryDate.isBefore(startOfYear) && entryDate.isBefore(LocalDate.now())) {
+                                System.out.println(line);
                             }
+                            break;
+                        }
                         }
                         if (choice.equals("4")) {
-                            if (!entryDate.isBefore(startOfLastYear) && entryDate.isBefore(startOfYear)) {
-                                System.out.println(date);
+
+                            if (entryDate.isBefore(startOfYear) && entryDate.isBefore(LocalDate.now())) {
+                                System.out.println(line);
                             }
                         }
                         if (choice.equals("5")){
@@ -189,7 +194,10 @@ public class ledgerScreen {
                             System.out.println("""
                                         Would you like to return to the Reports screen?
                                         1) Yes
-                                        2) No""");
+                                        2) No
+                                        -----------------------------------------------
+                                        If Not:
+                                         ----------------------------------------------""");
                             if(vendorSearch.equals("1")){
                                 System.out.println("returning to Reports");
                                 break;
