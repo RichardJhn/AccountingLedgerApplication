@@ -86,5 +86,27 @@ public class HomeScreen {
     }catch (IOException e){
         System.out.println("an error occured");
     }
-}}
+    }
+    public static void transaction() {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            FileWriter newWriter = new FileWriter("UserPaymentInfo.csv", true );
+            System.out.println("what is your name?");
+            String name = scanner.nextLine();
+            System.out.println("What is your debit card info?");
+            String debitCard = scanner.nextLine();
+            System.out.println("What is you cvv?");
+            String cvv = scanner.nextLine();
+            System.out.println("what is the expiration date??");
+            String expiration = scanner.nextLine();
+
+            newWriter.write(String.format("\nName:%s\nCardNumber:%s\nCVV:%s\nExpiration:%s", name, debitCard, cvv, expiration));
+            newWriter.close();
+
+        } catch (IOException e) {
+            System.out.println("an error occured");
+        }
+    }
+}
+
 
