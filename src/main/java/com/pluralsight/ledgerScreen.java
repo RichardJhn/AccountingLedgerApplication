@@ -167,10 +167,12 @@ public class ledgerScreen {
                             }
                         }
                         if (choice.equals("5")){
-                            String vendorSearch = scanner.nextLine();
                             System.out.println("Which vendor would you like to search?");
-                            if(vendorSearch.equalsIgnoreCase(vendor)){
-                                System.out.println(vendor);
+                            String vendorSearch = scanner.nextLine();
+                            for (LedgerEntry entry : entries){
+                            if(entry.getVendor().equalsIgnoreCase(vendorSearch)){
+                                System.out.println(loadEntries();
+                            }
                             }
 
                         }
