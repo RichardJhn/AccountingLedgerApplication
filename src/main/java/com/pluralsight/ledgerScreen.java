@@ -121,7 +121,7 @@ public class ledgerScreen {
             System.out.println("Enter your choice: ");
 
             choice = scanner.nextLine().trim();
-            if(choice.equalsIgnoreCase("6")) {
+            if (choice.equalsIgnoreCase("6")) {
                 System.out.println("returning to Ledger Menu");
                 break;
             }
@@ -134,15 +134,16 @@ public class ledgerScreen {
                     String[] parts = line.split("\\|");
                     if (parts.length == 5) {
                         String date = parts[0];
-                        //String item = parts[2];
-                        //String time = parts[1];
-                        //String vendor = parts[3];
-                        //double amount = Double.parseDouble(parts[4]);
+                        String item = parts[2];
+                        String time = parts[1];
+                        String vendor = parts[3];
+                        double amount = Double.parseDouble(parts[4]);
                         LocalDate now = LocalDate.now();
                         LocalDate entryDate = LocalDate.parse(date, dateFormat);
                         LocalDate startOfMonth = LocalDate.now().withDayOfMonth(1);
                         LocalDate firstDayLastMonth = now.minusMonths(1);
-                        LocalDate startOfYear = LocalDate.ofYearDay(2025,1);
+                        LocalDate startOfYear = LocalDate.of(now.getYear(), 1, 1);
+                        LocalDate startOfLastYear = LocalDate.of(now.getYear() - 1, 1, 1);
 
 
                         if (choice.equals("1")) {
@@ -150,21 +151,34 @@ public class ledgerScreen {
                                 System.out.println(date);
                             }
                         }
-                        if (choice.equals("2")){
-                            if(!entryDate.isBefore(firstDayLastMonth) && entryDate.isBefore(startOfMonth)){
+                        if (choice.equals("2")) {
+                            if (!entryDate.isBefore(firstDayLastMonth) && entryDate.isBefore(startOfMonth)) {
                                 System.out.println(date);
                             }
                         }
-                        if (choice.equals("3")){
-                            if(!entryDate.isBefore(startOfYear)){
-                            System.out.println(date);
+                        if (choice.equals("3")) {
+                            if (!entryDate.isBefore(startOfYear)) {
+                                System.out.println(date);
+                            }
+                        }
+                        if (choice.equals("4")) {
+                            if (!entryDate.isBefore(startOfLastYear) && entryDate.isBefore(startOfYear)) {
+                                System.out.println(date);
+                            }
+                        }
+                        if (choice.equals("5")){
+                            String vendorSearch = scanner.nextLine();
+                            System.out.println("Which vendor would you like to search?");
+                            if(vendorSearch.equalsIgnoreCase(vendor)){
+                                System.out.println(vendor);
+                            }
+
                         }
 
                     }
-                    }
-
-
                 }
+
+
             } catch (IOException e) {
                 System.out.println("file not found");
             }
