@@ -113,7 +113,7 @@ public class ledgerScreen {
                     1) Month to date
                     2) Previous Month
                     3) Year to Date
-                    4)Previous Year
+                    4) Previous Year
                     5) Search by vendor
                     6) Return to Ledger menu \n""");
 
@@ -121,7 +121,7 @@ public class ledgerScreen {
             System.out.println("Enter your choice: ");
 
             choice = scanner.nextLine().trim();
-            if(!choice.equalsIgnoreCase("6")) {
+            if(choice.equalsIgnoreCase("6")) {
                 System.out.println("returning to Ledger Menu");
                 break;
             }
@@ -146,8 +146,9 @@ public class ledgerScreen {
                             if (!entryDate.isBefore(startOfMonth)) {
                                 System.out.println(date);
                             }
-
-
+                        }
+                        if (choice.equals("2")){
+                            if (!entryDate.isBefore(startOfMonth) && !entryDate.isAfter())
                         }
 
                     }
