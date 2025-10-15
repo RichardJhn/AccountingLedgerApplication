@@ -10,6 +10,9 @@ public class HomeScreen {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
+        //to do
+        //remove some redundant code and finilize report
+
         LocalDate displayTime = LocalDate.now();
 
 
