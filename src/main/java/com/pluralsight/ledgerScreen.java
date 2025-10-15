@@ -32,7 +32,6 @@ public class ledgerScreen {
                     entries.add(new depositEntry(date, time, item, vendor, amount));
                 }
             }
-
             //use this to swap elements
             Collections.reverse(entries);
 
@@ -108,6 +107,7 @@ public class ledgerScreen {
 
     private void showReports() {
         String choice = "";
+
         while (!choice.equalsIgnoreCase("6")) {
             System.out.println("""
                     
@@ -136,10 +136,10 @@ public class ledgerScreen {
                     String[] parts = line.split("\\|");
                     if (parts.length == 5) {
                         String date = parts[0];
-                        //String item = parts[2];
-                        //String time = parts[1];
-                        //String vendor = parts[3];
-                        //double amount = Double.parseDouble(parts[4]);
+                        String item = parts[2];
+                        String time = parts[1];
+                        String vendor = parts[3];
+                        double amount = Double.parseDouble(parts[4]);
 
                         //--------setting the dates--------------------------
                         LocalDate now = LocalDate.now();
