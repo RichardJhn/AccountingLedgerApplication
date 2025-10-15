@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -33,15 +34,7 @@ public class HomeScreen {
                 choice = scanner.nextLine().trim();
                 //Using scanner
                 if (choice.equalsIgnoreCase("d")) {
-                    System.out.println("How much would you like to deposit?: ");
-                    double depositAmount = scanner.nextDouble();
-                    scanner.nextLine();
-                    //to do: find a way to combine deposit to tal ammount
-                    //have a predefined ammount and transfer all information to csv
-                    totalAmountInAccount += depositAmount;
-                    System.out.printf("You have deposited $%.2f into your bank account.", depositAmount);
-                    System.out.printf("you now have $%.2f in your account. ", totalAmountInAccount);
-                    //placeholder
+                    showDeposit();
                 } else if (choice.equalsIgnoreCase("p")) {
                     System.out.println("Please enter your Debit Card information : ");
                     //to do:
@@ -69,9 +62,29 @@ public class HomeScreen {
 
 
 
+    public static void showDeposit(){
+        try {
+            Scanner scanner = new Scanner(System.in);
+            FileWriter myWriter = new FileWriter("information.csv", true);
+            System.out.println("What is the date?");
+            String date = scanner.nextLine();
+            System.out.println("What time is it?");
+            String time = scanner.nextLine();
+            System.out.println("Whats the decription of your item?");
+            String description = scanner.nextLine();
+            System.out.println("Who is the Vendor?");
+            String vendor = scanner.nextLine();
+            System.out.println("How much is this item?");
+            double price = scanner.nextDouble();
+            scanner.nextLine();
 
 
-    public void showDeposit(){
+            depositEntry deposit = new depositEntry(date, time, description, vendor, price);
+            myWriter.write(String.format("\n%s|%s|%s|%s|%.2f", date, time, description, vendor, price));
+            myWriter.close();
+
+    }catch (IOException e){
+        System.out.println("an error occured");
     }
-}
+}}
 
