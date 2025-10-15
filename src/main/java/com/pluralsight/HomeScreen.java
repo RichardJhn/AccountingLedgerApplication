@@ -37,11 +37,7 @@ public class HomeScreen {
                     showDeposit();
                 } else if (choice.equalsIgnoreCase("p")) {
                     System.out.println("Please enter your Debit Card information : ");
-                    //to do:
-                    //find a way to have java read numbers in between space
-                    //double debitCardInfo = scanner.nextDouble();
-                    //System.out.printf("you have saved the card %.0f to your banking information.", debitCardInfo);
-                    //placeholder
+                    transaction();
                 } else if (choice.equalsIgnoreCase("l")) {
                    new ledgerScreen();
                     //placeholder
@@ -100,7 +96,7 @@ public class HomeScreen {
             System.out.println("what is the expiration date??");
             String expiration = scanner.nextLine();
 
-            newWriter.write(String.format("\nName:%s\nCardNumber:%s\nCVV:%s\nExpiration:%s", name, debitCard, cvv, expiration));
+            newWriter.write(String.format("\nName:%s|CardNumber:%s|CVV:%s|Expiration:%s", name, debitCard, cvv, expiration));
             newWriter.close();
 
         } catch (IOException e) {
