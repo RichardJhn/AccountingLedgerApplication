@@ -1,10 +1,6 @@
 package com.pluralsight;
 
-import java.security.PublicKey;
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.time.*;
-import java.io.*;
 
 public class Reports {
     Scanner scanner = new Scanner(System.in);

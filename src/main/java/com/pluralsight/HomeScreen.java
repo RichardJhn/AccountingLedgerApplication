@@ -12,7 +12,7 @@ public class HomeScreen {
 
         //to do
         //remove some redundant code and finalize report
-        //fix deposit and make payment screen
+        //fix payment screen
 
         LocalDate displayTime = LocalDate.now();
 
