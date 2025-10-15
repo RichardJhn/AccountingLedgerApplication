@@ -8,12 +8,13 @@ import java.time.*;
 public class ledgerScreen {
     Scanner scanner = new Scanner(System.in);
 
-    private List<LedgerEntry> entries = new ArrayList<>();
+    private List<depositEntry> entries = new ArrayList<>();
 
     public ledgerScreen() {
         loadEntries();
         showMenu();
     }
+    //----------------------------loading entries----------------------------------------------------
 
     private void loadEntries() {
         try (BufferedReader reader = new BufferedReader(new FileReader("information.csv"))) {
@@ -28,7 +29,7 @@ public class ledgerScreen {
                     String time = parts[1];
                     String vendor = parts[3];
                     double amount = Double.parseDouble(parts[4]);
-                    entries.add(new LedgerEntry(date, time, item, vendor, amount));
+                    entries.add(new depositEntry(date, time, item, vendor, amount));
                 }
             }
 
@@ -39,6 +40,7 @@ public class ledgerScreen {
             System.out.println("Error loading ledger entries.");
         }
     }
+    //---------------showing ledger menu---------------
 
     private void showMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -54,7 +56,7 @@ public class ledgerScreen {
                     R) Reports
                     H) Home
                     """);
-            System.out.print("Enter your choice: ");
+            System.out.print("Enter your choice: \n");
             choice = scanner.nextLine().trim();
 
             switch (choice.toUpperCase()) {
@@ -81,13 +83,13 @@ public class ledgerScreen {
 
     private void showAll() {
         System.out.println("All Entries: ");
-        for (LedgerEntry entry : entries) {
+        for (depositEntry entry : entries) {
             System.out.println(entry);
         }
     }
 
     private void showDeposits() {
-        for (LedgerEntry entry : entries) {
+        for (depositEntry entry : entries) {
             if (entry.getAmount() > 0) {
                 System.out.println(entry);
             }
@@ -96,12 +98,13 @@ public class ledgerScreen {
 
     private void showPayments() {
         System.out.println("Payments: ");
-        for (LedgerEntry entry : entries) {
+        for (depositEntry entry : entries) {
             if (entry.getAmount() < 0) {
                 System.out.println(entry);
             }
         }
     }
+    //----------------showing reports screen-----------
 
     private void showReports() {
         String choice = "";
@@ -125,8 +128,6 @@ public class ledgerScreen {
                 System.out.println("returning to Ledger Menu");
                 break;
             }
-
-
             try (BufferedReader reader = new BufferedReader(new FileReader("information.csv"))) {
                 String line;
 
@@ -135,10 +136,12 @@ public class ledgerScreen {
                     String[] parts = line.split("\\|");
                     if (parts.length == 5) {
                         String date = parts[0];
-                        String item = parts[2];
-                        String time = parts[1];
-                        String vendor = parts[3];
-                        double amount = Double.parseDouble(parts[4]);
+                        //String item = parts[2];
+                        //String time = parts[1];
+                        //String vendor = parts[3];
+                        //double amount = Double.parseDouble(parts[4]);
+
+                        //--------setting the dates--------------------------
                         LocalDate now = LocalDate.now();
                         LocalDate entryDate = LocalDate.parse(date, dateFormat);
                         LocalDate startOfMonth = LocalDate.now().withDayOfMonth(1);
@@ -148,9 +151,11 @@ public class ledgerScreen {
                         LocalDate startOfNextMonth = startOfMonth.plusMonths(1);
                         LocalDate endOfLastMonth = startOfMonth.withDayOfMonth(1).minusDays(1);
 
+                        //--------------making the choices----------------
+
 
                         if (choice.equals("1")) {
-                            for (LedgerEntry entry : entries) {
+                            for (depositEntry entry : entries) {
                                 if (!entryDate.isBefore(startOfMonth) && entryDate.isBefore(startOfNextMonth)) {
                                     System.out.println(line);
                                 }
@@ -158,7 +163,7 @@ public class ledgerScreen {
                             }
                         }
                         if (choice.equals("2")) {
-                            for (LedgerEntry entry : entries) {
+                            for (depositEntry entry : entries) {
                                 if (entryDate.isAfter(firstDayLastMonth) && entryDate.isBefore(endOfLastMonth)) {
                                     System.out.println(line);
                                 }
@@ -166,7 +171,7 @@ public class ledgerScreen {
                             }
                         }
                         if (choice.equals("3")) {
-                            for (LedgerEntry entry : entries){
+                            for (depositEntry entry : entries){
                             if (!entryDate.isBefore(startOfYear) && entryDate.isBefore(LocalDate.now())) {
                                 System.out.println(line);
                             }
@@ -182,11 +187,9 @@ public class ledgerScreen {
                         if (choice.equals("5")){
                             System.out.println("Which vendor would you like to search?");
                             String vendorSearch = scanner.nextLine();
-                            for (LedgerEntry entry : entries){
+                            for (depositEntry entry : entries){
                             if(entry.getVendor().equalsIgnoreCase(vendorSearch)){
                                 System.out.println(entry);
-
-
 
                             }
 
@@ -194,12 +197,10 @@ public class ledgerScreen {
                             System.out.println("""
                                         Would you like to return to the Reports screen?
                                         1) Yes
-                                        2) No
-                                        -----------------------------------------------
                                         If Not:
                                          ----------------------------------------------""");
                             if(vendorSearch.equals("1")){
-                                System.out.println("returning to Reports");
+                                System.out.println("Returning to Reports");
                                 break;
                             }
 
@@ -214,5 +215,7 @@ public class ledgerScreen {
             }
 
         }
+
+
+        }
     }
-}

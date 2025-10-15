@@ -1,8 +1,7 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalDate;
 
@@ -11,7 +10,7 @@ public class HomeScreen {
         Scanner scanner = new Scanner(System.in);
 
         //to do
-        //remove some redundant code and finilize report
+        //remove some redundant code and finalize report
         //fix deposit and make payment screen
 
         LocalDate displayTime = LocalDate.now();
@@ -26,7 +25,7 @@ public class HomeScreen {
             while (!choice.equalsIgnoreCase("X")) {
                 System.out.println("=== HomeScreen ===");
                 System.out.println("""
-                        D)Add Deposit(Credit)
+                        D)Add Deposit
                         P)Make Payment(Debit)
                         L)Ledger
                         X)Exit \n""");
@@ -66,9 +65,13 @@ public class HomeScreen {
                 System.out.println("error reading file");
             }
 
+        }
 
 
 
+
+
+    public void showDeposit(){
     }
 }
 
