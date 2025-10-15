@@ -12,6 +12,7 @@ public class HomeScreen {
 
         //to do
         //remove some redundant code and finilize report
+        //fix deposit and make payment screen
 
         LocalDate displayTime = LocalDate.now();
 
@@ -25,7 +26,7 @@ public class HomeScreen {
             while (!choice.equalsIgnoreCase("X")) {
                 System.out.println("=== HomeScreen ===");
                 System.out.println("""
-                        D)Add Deposit
+                        D)Add Deposit(Credit)
                         P)Make Payment(Debit)
                         L)Ledger
                         X)Exit \n""");

@@ -10,7 +10,7 @@ public class userInput {
     private double Payment;
     private String Ledger;
 
-
+//this was a test placeholder and will be moved
     public double getDeposit() {
         return Deposit;
     }

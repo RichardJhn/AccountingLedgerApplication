@@ -144,21 +144,29 @@ public class ledgerScreen {
                         LocalDate firstDayLastMonth = now.minusMonths(1);
                         LocalDate startOfYear = LocalDate.of(now.getYear(), 1, 1);
                         LocalDate startOfLastYear = LocalDate.of(now.getYear() - 1, 1, 1);
+                        LocalDate startOfNextMonth = startOfMonth.plusMonths(1);
+                        LocalDate endOfLastMonth = now.withDayOfMonth(1).minusDays(1);
 
 
                         if (choice.equals("1")) {
-                            if (!entryDate.isBefore(startOfMonth)) {
-                                System.out.println(date);
+                            for (LedgerEntry entry : entries) {
+                                if (!entryDate.isBefore(startOfMonth) && entryDate.isBefore(startOfNextMonth)) {
+                                    System.out.println(entry);
+                                }
+                                break;
                             }
                         }
                         if (choice.equals("2")) {
-                            if (!entryDate.isBefore(firstDayLastMonth) && entryDate.isBefore(startOfMonth)) {
-                                System.out.println(date);
+                            for (LedgerEntry entry : entries) {
+                                if (!entryDate.isAfter(firstDayLastMonth) && !entryDate.isBefore(endOfLastMonth)) {
+                                    System.out.println(entry);
+                                }
+                                break;
                             }
                         }
                         if (choice.equals("3")) {
                             if (!entryDate.isBefore(startOfYear)) {
-                                System.out.println(date);
+                                System.out.println(entries);
                             }
                         }
                         if (choice.equals("4")) {
