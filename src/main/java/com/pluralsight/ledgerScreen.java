@@ -142,6 +142,7 @@ public class ledgerScreen {
                         LocalDate entryDate = LocalDate.parse(date, dateFormat);
                         LocalDate startOfMonth = LocalDate.now().withDayOfMonth(1);
                         LocalDate firstDayLastMonth = now.minusMonths(1);
+                        LocalDate startOfYear = LocalDate.ofYearDay(2025,1);
 
 
                         if (choice.equals("1")) {
@@ -154,7 +155,12 @@ public class ledgerScreen {
                                 System.out.println(date);
                             }
                         }
+                        if (choice.equals("3")){
+                            if(!entryDate.isBefore(startOfYear)){
+                            System.out.println(date);
+                        }
 
+                    }
                     }
 
 
