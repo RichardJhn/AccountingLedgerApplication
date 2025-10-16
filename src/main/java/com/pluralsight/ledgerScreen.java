@@ -70,7 +70,7 @@ public class ledgerScreen {
                     showPayments();
                     break;
                 case "R":
-                    showReports(); //WIP
+                    showReports();
                     break;
                 case "H":
                     System.out.println("Returning to Home Screen...");
@@ -80,7 +80,7 @@ public class ledgerScreen {
             }
         }
     }
-
+    //-------------creating methods-------------
     private void showAll() {
         System.out.println("All Entries: ");
         for (depositEntry entry : entries) {

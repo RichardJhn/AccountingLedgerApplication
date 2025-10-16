@@ -9,18 +9,12 @@ import java.time.LocalDate;
 public class HomeScreen {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-
-        //to do
-        //remove some redundant code and finalize report
-        //fix payment screen
-
         LocalDate displayTime = LocalDate.now();
-
 
         try {
             FileReader fileReader = new FileReader("information.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            //sculpting the main menu
+            //--------------Showing the Main Menu----------------
             double totalAmountInAccount = 0.00;
             String choice = "";
             while (!choice.equalsIgnoreCase("X")) {
@@ -36,9 +30,11 @@ public class HomeScreen {
                 //Using scanner
                 if (choice.equalsIgnoreCase("d")) {
                     showDeposit();
+                    System.out.println("You have made a new deposit into the system");
                 } else if (choice.equalsIgnoreCase("p")) {
-                    System.out.println("Please enter your Debit Card information : ");
+                    System.out.println("Please enter your transaction information : ");
                     transaction();
+                    System.out.println("You have added a new transaction into the system");
                 } else if (choice.equalsIgnoreCase("l")) {
                    new ledgerScreen();
                     //placeholder
@@ -56,8 +52,7 @@ public class HomeScreen {
             }
 
         }
-
-
+        //-------------Making the deposit screen------------------
 
     public static void showDeposit(){
         try {
@@ -83,6 +78,7 @@ public class HomeScreen {
     }catch (IOException e){
         System.out.println("an error occured");
     }
+        //-------------making the transaction screen--------------
     }
     public static void transaction() {
         try {
