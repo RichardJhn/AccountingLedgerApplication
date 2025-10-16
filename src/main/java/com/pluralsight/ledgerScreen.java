@@ -101,7 +101,7 @@ public class ledgerScreen {
         System.out.println("Here are your payments: ");
         for (depositEntry entry : entries) {
             if (entry.getAmount() < 0) {
-                System.out.println();
+                System.out.println(entry);
             }
         }
     }
@@ -138,8 +138,8 @@ public class ledgerScreen {
                     String[] parts = line.split("\\|");
                     if (parts.length == 5) {
                         String date = parts[0];
-                        String item = parts[2];
                         String time = parts[1];
+                        String item = parts[2];
                         String vendor = parts[3];
                         double amount = Double.parseDouble(parts[4]);
 
@@ -208,13 +208,17 @@ public class ledgerScreen {
 
                         }
 
+
                     }
                 }
 
 
+
             } catch (IOException e) {
                 System.out.println("file not found");
+
             }
+
 
         }
 

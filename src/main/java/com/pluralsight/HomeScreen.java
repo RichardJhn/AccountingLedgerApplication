@@ -46,7 +46,7 @@ public class HomeScreen {
                     System.out.println("Exiting Home-Screen");
                     //placeholder
                 } else {
-                    System.out.println("Closing screen");
+                    System.out.println("Invalid output!");
                 }
             }
 
