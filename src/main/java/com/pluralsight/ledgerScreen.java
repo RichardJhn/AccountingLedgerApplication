@@ -16,7 +16,7 @@ public class ledgerScreen {
     }
     //----------------------------loading entries----------------------------------------------------
 
-    private void loadEntries() {
+    public void loadEntries() {
         try (BufferedReader reader = new BufferedReader(new FileReader("information.csv"))) {
             //still not sure why it is not reading from my information file
             String line;
@@ -48,12 +48,13 @@ public class ledgerScreen {
         while (!choice.equalsIgnoreCase("H")) {
             System.out.println("""
                     
-                    === Ledger Menu ===
-                    A) All Entries
-                    D) Deposits Only
-                    P) Payments Only
-                    R) Reports
-                    H) Home
+                    ==== Ledger Menu ====
+                     A) All Entries
+                     D) Deposits Only
+                     P) Payments Only
+                     R) Reports
+                     H) Home
+                    ======================
                     """);
             System.out.print("Enter your choice: \n");
             choice = scanner.nextLine().trim();
@@ -88,6 +89,7 @@ public class ledgerScreen {
     }
 
     private void showDeposits() {
+        System.out.println("Here are your deposits: ");
         for (depositEntry entry : entries) {
             if (entry.getAmount() > 0) {
                 System.out.println(entry);
@@ -96,10 +98,10 @@ public class ledgerScreen {
     }
 
     private void showPayments() {
-        System.out.println("Payments: ");
+        System.out.println("Here are your payments: ");
         for (depositEntry entry : entries) {
             if (entry.getAmount() < 0) {
-                System.out.println(entry);
+                System.out.println();
             }
         }
     }
@@ -110,15 +112,15 @@ public class ledgerScreen {
 
         while (!choice.equalsIgnoreCase("6")) {
             System.out.println("""
-                    
-                    
-                    === Reports Menu ===
-                    1) Month to date
-                    2) Previous Month
-                    3) Year to Date
-                    4) Previous Year
-                    5) Search by vendor
-                    6) Return to Ledger menu \n""");
+                   
+                    ==== Reports Menu ====
+                     1) Month to date
+                     2) Previous Month
+                     3) Year to Date
+                     4) Previous Year
+                     5) Search by vendor
+                     6) Return to Ledger menu
+                    ======================= \n""");
 
 
             System.out.println("Enter your choice: ");

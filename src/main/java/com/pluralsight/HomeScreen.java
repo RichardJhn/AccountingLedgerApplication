@@ -24,12 +24,13 @@ public class HomeScreen {
             double totalAmountInAccount = 0.00;
             String choice = "";
             while (!choice.equalsIgnoreCase("X")) {
-                System.out.println("=== HomeScreen ===");
                 System.out.println("""
-                        D)Add Deposit
-                        P)Make Payment(Debit)
-                        L)Ledger
-                        X)Exit \n""");
+                     ====== HomeScreen ======
+                      D)Add Deposit         
+                      P)Make Payment(Debit) 
+                      L)Ledger              
+                      X)Exit                
+                     ========================\n""");
                 System.out.println("enter your choice: ");
                 choice = scanner.nextLine().trim();
                 //Using scanner
