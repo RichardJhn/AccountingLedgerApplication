@@ -1,8 +1,6 @@
 package com.pluralsight;
 
-import javax.swing.*;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalDate;
 
@@ -10,7 +8,7 @@ public class HomeScreen {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         LocalDate displayTime = LocalDate.now();
-
+        //---------------- Main Menu Here -----------------------
         try {
             FileReader fileReader = new FileReader("information.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -52,7 +50,7 @@ public class HomeScreen {
             }
 
         }
-        //-------------Making the deposit screen------------------
+        //------------- Deposit and Transaction deposit screens------------------
 
     public static void showDeposit(){
         try {
